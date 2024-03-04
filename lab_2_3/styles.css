@@ -1,0 +1,49 @@
+  body {
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+
+  .header-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 20px;
+  }
+
+  .header { 
+    text-align: left;
+  }
+
+  .pageInfo {
+    font-style: italic;
+    text-align: right;
+  }
+
+  .image {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+
+  .footer {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    display: block;
+  }
+
+  .info {
+    max-width: 40%;
+  }
+
+  .info-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+  }
