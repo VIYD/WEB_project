@@ -14,8 +14,7 @@ body {
 .border {
   margin: 20px;
   padding: 10px;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid;
   text-align: center;
 }
 
@@ -35,14 +34,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-img {
+.image-flex-container img {
   transition: all 0.2s ease-in-out;
   margin: 10px;
   padding: 10px;
 }
-
-img:hover {
+.image-flex-container img:hover {
   transform: scale(1.1);
 }
 
