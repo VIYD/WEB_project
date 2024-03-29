@@ -55,6 +55,22 @@ body {
   background-color: #e6e6e6;
 }
 
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-content: space-around;
+  background-color: #e6e6e6;
+}
+
+input[type="submit"] {
+  align-self: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .header-flex-container {
     flex-direction: column;
@@ -71,12 +87,7 @@ body {
     max-width: 100%;
     padding: 20px;
   }
-  .menu {
-    text-align: center;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-right: 0;
-  }
+
   a {
     margin-right: 0;
     margin-bottom: 10px;

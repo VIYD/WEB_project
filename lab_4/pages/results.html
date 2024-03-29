@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Survey Data</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body>
+    <div class="header-flex-container">
+        <div class="header">
+            <h1>Непотрібне опитування &#169;&#8482;</h1>
+        </div>
+    </div>
+
+    <div class="pageInfo">
+        <h2>Оберіть критерії:</h2>
+    </div>
+
+    <div class="flex-container-column">
+        <form id="filterForm">
+            <div class="flex-container">
+            <label><input type="checkbox" name="filterCriteria" value="факультет"> Факультет</label><br>
+            <label><input type="checkbox" name="filterCriteria" value="потік"> Потік</label><br>
+            <label><input type="checkbox" name="filterCriteria" value="зручний час"> Зручний час</label><br>
+            <label><input type="checkbox" name="filterCriteria" value="середній бал"> Середній бал</label><br><br>
+        </div>
+
+        <div class="flex-container">
+            <div id="criteriaInputs">
+                <!-- Критерії показуватимуться тут -->
+            </div>
+        
+        </div>
+            <input type="submit" value="Відфільтрувати">
+        
+        </form>
+    </div>
+
+    <div class="pageInfo">
+        <h2>Результати:</h2>
+    </div>
+
+    <div class="flex-container">
+        <div id="filteredResults">
+            <!-- Відфільтровані результати показуватимуться тут -->
+        </div>
+    </div>
+
+    <script src="../scripts/surveyFilter.js"></script>
+</body>
+
+</html>
