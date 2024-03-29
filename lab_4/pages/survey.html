@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+<body>
+    <div class="header-flex-container">
+        <div class="header">
+            <h1>Непотрібне опитування &#169;&#8482;</h1>
+        </div>
+    </div>
+
+    <div class="pageInfo">
+        <h2>Пройдіть невелике опитування та отримайте винагороду!</h2>
+    </div>
+
+    <div class="flex-container">
+        <form id="surveyForm">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="faculty">Факультет:</label>
+            <select id="faculty" name="факультет">
+                <option value="електроніки">Електроніки</option>
+                <option value="прикладної математики">Прикладної Математики</option>
+                <option value="інший">Інший</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
+
+            <label>Університетський Потік:</label><br>
+            <input type="radio" id="stream1" name="потік" value="КН">
+            <label for="stream1">КН</label><br>
+            <input type="radio" id="stream2" name="потік" value="ІПЗ">
+            <label for="stream2">ІПЗ</label><br>
+            <input type="radio" id="stream3" name="потік" value="СА">
+            <label for="stream3">СА</label><br><br>
+
+            <label>Академічна Група:</label><br>
+            <input type="checkbox" id="group1" name="група[]" value="1">
+            <label for="group1">Група 1</label><br>
+            <input type="checkbox" id="group2" name="група[]" value="2">
+            <label for="group2">Група 2</label><br>
+            <input type="checkbox" id="group3" name="група[]" value="3">
+            <label for="group3">Група 3</label><br><br>
+
+            <label for="convenientTime">Зручний час для співбесіди:</label>
+            <input type="datetime-local" id="convenientTime" name="зручний час"><br><br>
+
+            <label for="averagePoints">Середній бал:</label>
+            <input type="number" id="averagePoints" name="середній бал"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="../scripts/surveySave.js"></script>
+</body>
+</html>
