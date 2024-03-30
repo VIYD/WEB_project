@@ -71,6 +71,13 @@ input[type="submit"] {
   padding: 10px;
 }
 
+button {
+  align-self: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .header-flex-container {
     flex-direction: column;

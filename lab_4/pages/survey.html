@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
+    <title>Survey</title>
     <link rel="stylesheet" href="../styles/styles.css" />
 </head>
 <body>
@@ -17,6 +17,7 @@
         <h2>Пройдіть невелике опитування та отримайте винагороду!</h2>
     </div>
 
+    <div class="flex-container-column">
     <div class="flex-container">
         <form id="surveyForm">
             <label for="name">Ім'я:</label>
@@ -27,7 +28,6 @@
                 <option value="електроніки">Електроніки</option>
                 <option value="прикладної математики">Прикладної Математики</option>
                 <option value="інший">Інший</option>
-                <!-- Add more options as needed -->
             </select><br><br>
 
             <label>Університетський Потік:</label><br>
@@ -52,8 +52,9 @@
             <label for="averagePoints">Середній бал:</label>
             <input type="number" id="averagePoints" name="середній бал"><br><br>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Завершити">
         </form>
+    </div>
     </div>
 
     <script src="../scripts/surveySave.js"></script>
