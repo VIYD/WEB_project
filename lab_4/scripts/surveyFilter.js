@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Ініціалізація вхідних критеріїв
     initializeCriteriaInputs();
 });
 
 document.getElementById('filterForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Попередити відправку форми
+    event.preventDefault(); // захищає від перезапуску сторінки при натисканні на кнопку
 
     const selectedCriteria = getSelectedCriteria();
 
-    // Виклик функції фільтрації з витягнутими критеріями
+    // виклик функції фільтрації з критеріями
     const filteredData = filterSurveyData(selectedCriteria);
 
-    // Відображення відфільтрованих результатів
+    // відображення відфільтрованих результатів
     const filteredResultsDiv = document.getElementById('filteredResults');
     filteredResultsDiv.innerHTML = ''; // Очистити попередні результати
     if (filteredData.length === 0) {
@@ -25,12 +24,13 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
     }
 });
 
-// Функція фільтрації результатів опитування за обраними критеріями
+//
+// фільтрація
+//
 function filterSurveyData(criteria) {
-    // Завантаження даних опитування з локального сховища
     const surveys = JSON.parse(localStorage.getItem('surveys')) || [];
 
-    // Фільтрація опитувань за критеріями
+    // фільтрація опитувань за критеріями
     const filteredSurveys = surveys.filter(survey => {
         for (const key in criteria) {
             if (criteria[key] && survey[key] !== criteria[key]) {
@@ -44,7 +44,9 @@ function filterSurveyData(criteria) {
     return filteredSurveys;
 }
 
-// Функція витягнення обраних критеріїв з чекбоксів
+//
+// функція витягнення обраних критеріїв з чекбоксів
+//
 function getSelectedCriteria() {
     const selectedCriteria = {};
     const checkboxes = document.querySelectorAll('input[name="filterCriteria"]');
@@ -58,14 +60,16 @@ function getSelectedCriteria() {
     return selectedCriteria;
 }
 
-// Функція ініціалізації вхідних критеріїв
+//
+// функція ініціалізації вхідних критеріїв
+//
 function initializeCriteriaInputs() {
     const criteriaInputsDiv = document.getElementById('criteriaInputs');
     const criteriaOptions = ['факультет', 'потік', 'зручний час', 'середній бал'];
     criteriaOptions.forEach(criteria => {
         const inputLabel = document.createElement('label');
         inputLabel.textContent = `Оберіть ${criteria.charAt(0).toUpperCase() + criteria.slice(1)}:`;
-        inputLabel.setAttribute('for', `selected${criteria.charAt(0).toUpperCase() + criteria.slice(1)}`); // Встановлення атрибуту for
+        inputLabel.setAttribute('for', `selected${criteria.charAt(0).toUpperCase() + criteria.slice(1)}`); // встановлення атрибуту for
         inputLabel.style.opacity = '50%';
         inputLabel.style.paddingTop = '10px';
         inputLabel.style.display = 'inline-block';
@@ -76,7 +80,9 @@ function initializeCriteriaInputs() {
             inputElement.id = `selected${criteria.charAt(0).toUpperCase() + criteria.slice(1)}`;
             inputElement.name = `selected${criteria.charAt(0).toUpperCase() + criteria.slice(1)}`;
             inputElement.style.opacity = '50%';
-            // Додавання варіантів для факультету чи потоку
+            //
+            // додавання варіантів для факультету чи потоку
+            //
             if (criteria === 'факультет') {
                 ['електроніки', 'прикладної математики', 'інший'].forEach(option => {
                     const optionElement = document.createElement('option');
@@ -84,14 +90,14 @@ function initializeCriteriaInputs() {
                     optionElement.textContent = option;
                     inputElement.appendChild(optionElement);
                 });
-            } else { // Потік
+            } else { // потік
                 ['КН', 'ІПЗ', 'СА'].forEach(option => {
                     const optionElement = document.createElement('option');
                     optionElement.textContent = option;
                     inputElement.appendChild(optionElement);
                 });
             }
-        } else { // Зручний час чи середній бал
+        } else { // зручний час чи середній бал
             inputElement = document.createElement('input');
             inputElement.type = criteria === 'зручний час' ? 'datetime-local' : 'text';
             inputElement.id = `selected${criteria.charAt(0).toUpperCase() + criteria.slice(1)}`;
@@ -104,7 +110,9 @@ function initializeCriteriaInputs() {
     });
 }
 
-// Подія, що слухає відображення/приховання вхідних критеріїв в залежності від вибору чекбокса
+//
+// подія, ховає або відображає лейбли та інпути 
+//
 document.querySelectorAll('input[name="filterCriteria"]').forEach(checkbox => {
     checkbox.addEventListener('change', function() {
         const criteriaName = this.value;

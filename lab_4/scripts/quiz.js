@@ -12,19 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 answers: [
                     {
                         answer: "Мадрид",
-                        isCorrect: false,
                     },
                     {
                         answer: "Київ",
-                        isCorrect: true,
                     },
                     {
                         answer: "Барселона",
-                        isCorrect: false,
                     },
                     {
                         answer: "Будапешт",
-                        isCorrect: false,
                     }
                 ],
             },
@@ -34,19 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 answers: [
                     {
                         answer: "0",
-                        isCorrect: false,
                     },
                     {
                         answer: "7",
-                        isCorrect: false,
                     },
                     {
                         answer: "5",
-                        isCorrect: true,
                     },
                     {
                         answer: "1",
-                        isCorrect: false,
                     }
                 ],
             },
@@ -56,15 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 answers: [
                     {
                         answer: "800 Мт",
-                        isCorrect: true,
                     },
                     {
                         answer: "360 Мт",
-                        isCorrect: false,
                     },
                     {
                         answer: "600 Мт",
-                        isCorrect: false,
                     }
                 ],
             }
