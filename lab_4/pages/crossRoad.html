@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road crossing</title>
+    <link rel="stylesheet" href="../styles/gameStyles.css">
+  </head>
+  <body>
+    <div class="header-flex-container">
+        <div class="header">
+            <h1>Можливо навіть потрібна гра? &#169;&#8482;</h1>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas" width="600" height="600"></canvas>
+    <button id="startBtn" onclick="startAgain()">Start Again</button>
+
+    <script src="../scripts/crossRoad.js"></script>
+    <div>
+      <button id="save">Show score</button>
+    </div>
+    <h3 id="min-header">Мінімальні значення</h3>
+    <div id="min-value"></div>
+    <h3 id="max-header">Максимальні значення</h3>
+    <div id="max-value"></div>
+  </body>
+</html>
