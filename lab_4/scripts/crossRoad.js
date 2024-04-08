@@ -35,6 +35,9 @@ function movePlayer(e) {
       cars = [];
       generateCars();
 
+      console.log(carSpeed)
+      console.log(carInterval)
+
       carInterval = Math.max(carInterval - carSpeed * 10, 100);
       clearTimeout(carTimer);
       carTimer = setTimeout(generateCars, carInterval);
@@ -115,13 +118,16 @@ function collisionDetection() {
 function startAgain() {
   gameOverFlag = false;
   score = 1;
-  cars = [];
   carSpeed = 2;
   playerY = 560;
+  carInterval = 500;
+  cars = []; 
+  clearTimeout(carTimer); 
   document.getElementById("startBtn").style.display = "none";
   draw();
   generateCars();
 }
+
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
