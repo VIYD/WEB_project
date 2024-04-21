@@ -1,7 +1,7 @@
 let surveys = JSON.parse(localStorage.getItem('surveys')) || [];
 
 document.getElementById('surveyForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Попередити відправку форми
+    event.preventDefault(); 
 
     const formData = new FormData(this);
     const formObject = {};
