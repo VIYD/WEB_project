@@ -18,6 +18,7 @@ const TestPage = () => {
   const saveResult = () => {
     const answers = document.querySelectorAll('input[type="radio"]:checked');
     const result = Array.from(answers).map((answer) => answer.value);
+    console.log(result);
     setResult(result);
     calculateScore(result); 
     return;
@@ -25,15 +26,23 @@ const TestPage = () => {
 
   const calculateScore = (result) => {
     let score = 0;
-    test.questions.forEach((question, index) => {
-      if (question.answers.find((answer) => answer.answer === result[index] && answer.isCorrect)) {
-        score++;
+    let index = 0;
+
+    for (let i = 0; i < test.questions.length; i++) {
+      console.log(index)
+      if (!test.questions[i].is_selected) {
+        continue;
       }
-    });
+      if (test.questions[i].answers.find((answer) => answer.answer === result[index] && answer.isCorrect)) {
+        score++;
+        index++;
+        continue;
+      }
+      index++;
+    }
     setScore(score);
-    console.log(score);
-    return;
   };
+  
   
   const startTest = () => {
     setshowSelectorElements(false);
