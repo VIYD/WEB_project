@@ -5,7 +5,7 @@ const testData = {
             question: "Вкажіть тег для блоку?",
             answers: [
                 {
-                    answer: "a",
+                    answer: "li",
                     isCorrect: false,
                 },
                 {
@@ -31,9 +31,14 @@ const testData = {
                     isCorrect: true,
                 },
                 {
-                    answer: "div",
+                    answer: "ul",
                     isCorrect: false,
                 },
+                //
+                //Мені довелось змінити answer з div на ul, тому що відповідь div вже була в попередньому питанні,
+                //логіка підрахунку правильних відповідей відбувається калічно, тому оскільки div у попередньому питанні
+                //відмічена як правильна відповідь, то в цьому питанні вона теж врахувалась би як правильна відповідь.
+                //
                 {
                     answer: "span",
                     isCorrect: false,

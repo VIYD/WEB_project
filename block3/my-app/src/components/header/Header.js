@@ -8,10 +8,7 @@ const Header = () => {
     return (
         <header>
             <h1>Потрібний React &#169;&#8482;</h1>
-            <a href="/settings">Налаштування</a>
             <a href="/test">Тест</a>
-
-            
         </header>
     );
 };
