@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <Header />
+    <AppHeader />
     <GameCanvas />
     <ScoreDisplay />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import AppHeader from './components/AppHeader.vue';
 import GameCanvas from './components/GameCanvas.vue';
 import ScoreDisplay from './components/ScoreDisplay.vue';
 
 export default {
   components: {
-    Header,
+    AppHeader,
     GameCanvas,
     ScoreDisplay
   }
