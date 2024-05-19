@@ -21,7 +21,7 @@ export default {
       score: 1,
       carWidth: 40,
       carHeight: 20,
-      ctx: null, // Initialize ctx here
+      ctx: null, 
       json: [],
     };
   },
@@ -107,7 +107,7 @@ export default {
           this.playerY + this.playerSize > car.y
         ) {
           this.gameOver();
-          this.saveData(this.score); // Ensure saveData is defined in methods
+          this.saveData(this.score); 
         }
       });
     },
